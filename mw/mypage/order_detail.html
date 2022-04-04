@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta property="og:url" content="">
-        <meta property="og:title" content="식자재왕 마이페이지">
+        <meta property="og:title" content="식자재왕 주문상세">
         <meta property="og:type" content="website">
         <meta property="og:image" content="../../mw/img/logo_favicon.ico">
-        <meta property="og:description" content="식자재왕 마이페이지">
-		<title>식자재왕 마이페이지</title>
-		<meta name="description" content="식자재왕 마이페이지">
+        <meta property="og:description" content="식자재왕 주문상세">
+		<title>식자재왕 주문상세</title>
+		<meta name="description" content="식자재왕 주문상세">
 		<meta name="author" content="minks">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no, address=no, email=no">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="header_center">
-                    <div class="header_tit">마이페이지</div>
+                    <div class="header_tit">주문상세</div>
                 </div>
             </header>
             
@@ -102,71 +102,246 @@
 			
 			<!-- content -->
             <div class="content_area">
-                <section class="mypage_main">
-                    <article class="my_ma_user_area cf">
-                        <div class="my_ma_user_img" style="background-image: url('../img/mypage_main2x_img2.png');"></div>
-                        <div class="my_ma_user_txt">
-                            <div class="user_level">일반회원</div>
-                            <div class="user_name">
-                                <span>홍길동</span>님
-                                <a href="../../mw/mypage/modify_password.html">
-                                    <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                </a>
+                <section class="order_detail">
+                    <!-- validForm : 유효성 체크할 경우 -->
+                    <form id="orderInfoForm" name="orderInfoForm" class="validForm" method="post" action="../../mw/mypage/order_list.html" onsubmit="return orderInfoSubmit(this);">
+                        <article class="or_de_goods_area">
+                            <div class="or_de_tit">YYYY-MM-DD[001-201124-00010]</div>
+                            
+                            <ul class="order_goods_list2 cf">
+                                <li>
+                                    <div class="order_goods_info">
+                                        <div class="order_goods_name">
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_detail_img.png" alt="order_detail_img">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <a href="../../mw/goods/detail.html">
+                                                    [식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="order_goods_ea cf">
+                                            <p class="or_de_item_tit">수량</p>
+                                            <p class="or_de_item_con"><span>100</span>개</p>
+                                        </div>
+
+                                        <div class="order_goods_cost cf">
+                                            <p class="or_de_item_tit">단가</p>
+                                            <p class="or_de_item_con"><span>1,000</span>원</p>
+                                        </div>
+
+                                        <div class="order_goods_price cf">
+                                            <p class="or_de_item_tit">금액</p>
+                                            <p class="or_de_item_con"><span>23,123,123</span>원</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order_goods_state">배송완료</div>
+                                </li>
+                                <li>
+                                    <div class="order_goods_info">
+                                        <div class="order_goods_name">
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_detail_img2.png" alt="order_detail_img2">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <a href="../../mw/goods/detail.html">
+                                                    [식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="order_goods_ea cf">
+                                            <p class="or_de_item_tit">수량</p>
+                                            <p class="or_de_item_con"><span>100</span>개</p>
+                                        </div>
+
+                                        <div class="order_goods_cost cf">
+                                            <p class="or_de_item_tit">단가</p>
+                                            <p class="or_de_item_con"><span>1,000</span>원</p>
+                                        </div>
+
+                                        <div class="order_goods_price cf">
+                                            <p class="or_de_item_tit">금액</p>
+                                            <p class="or_de_item_con"><span>23,123,123</span>원</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order_goods_state">반품신청</div>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="or_de_payment_area">
+                            <div class="or_de_tit">결제정보</div>
+                            
+                            <div class="order_payment_gprice cf">
+                                <p class="or_de_item_tit">주문금액</p>
+                                <p class="or_de_item_con"><span>190,000</span>원</p>
                             </div>
-                        </div>
-                        <div class="my_ma_user_btn">
-                            <div class="content_btn1_area">
-                                <button type="button" class="content_btn1"><span>로그아웃</span></button>
+                            
+                            <div class="order_payment_cprice cf">
+                                <p class="or_de_item_tit">쿠폰할인</p>
+                                <p class="or_de_item_con"><span>-33,000</span>원</p>
                             </div>
-                        </div>
-                    </article>
-                    
-                    <article class="my_ma_list_area">
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">나의 쇼핑정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/order_list.html">주문목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/order_claim.html">취소/반품 목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/coupon.html">쿠폰<span class="dot"></span><!--<span class="cnt">999+</span>--></a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/wish.html">관심상품</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/today.html">최근 본 상품</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">개인정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/modify_password.html">회원정보 수정</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/address.html">배송지 관리</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">고객센터</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/inquiry.html">1:1문의 내역</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/cscenter/main.html">고객센터</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
+                            
+                            <div class="order_payment_dprice cf">
+                                <p class="or_de_item_tit">배송비</p>
+                                <p class="or_de_item_con"><span class="free">무료배송</span></p>
+                            </div>
+                            
+                            <div class="order_payment_oprice cf">
+                                <p class="or_de_item_tit">결제금액</p>
+                                <p class="or_de_item_con"><span>42,310</span>원</p>
+                            </div>
+                            
+                            <div class="order_payment_method cf">
+                                <p class="or_de_item_tit">결제수단</p>
+                                <p class="or_de_item_con">계좌이체 ()</p>
+                            </div>
+                        </article>
+
+                        <article class="or_de_order_area">
+                            <div class="or_de_tit">주문자정보</div>
+                            
+                            <div class="content_text_tit">
+                                <label for="order_name">이름</label>
+                            </div>
+                            <div class="content_text_area">
+                                <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우 -->
+                                <input type="text" id="order_name" name="order_name" class="content_text" placeholder="이름" value="홍길동" required>
+                                <span class="content_text_btn"></span>
+								<span class="content_text_error"></span>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label for="order_mobile">휴대폰번호</label>
+                            </div>
+                            <div class="content_text_area">
+                                <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                <input type="tel" id="order_mobile" name="order_mobile" class="content_text tel_text" placeholder="휴대폰번호" data-type="tel" value="010-1234-5678" required numberonly>
+                                <span class="content_text_btn"></span>
+								<span class="content_text_error"></span>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label for="order_email">이메일주소</label>
+                            </div>
+                            <div class="content_text_area">
+                                <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                <input type="email" id="order_email" name="order_email" class="content_text" placeholder="이메일 주소" data-type="email" value="abcd1234@gmail.com" required>
+                                <span class="content_text_btn"></span>
+								<span class="content_text_error"></span>
+                            </div>
+                        </article>
+
+                        <article class="or_de_receiver_area">
+                            <div class="or_de_tit">배송지정보</div>
+                            
+                            <div class="content_text_tit">
+                                <label for="receiver_sub_address">배송주소</label>
+                            </div>
+                            <div class="content_text_con">
+                                서울특별시 성동구 성수1가 123길1 영창피아노빌딩<br>14층 A주식회사
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label for="receiver_mobile">수령인 연락처</label>
+                            </div>
+                            <div class="content_text_area">
+                                <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                <input type="tel" id="receiver_mobile" name="receiver_mobile" class="content_text tel_text" placeholder="수령인 연락처" data-type="tel" value="010-1234-5678" required numberonly>
+                                <span class="content_text_btn"></span>
+								<span class="content_text_error"></span>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label for="request_memo">배송요청사항</label>
+                            </div>
+                            <div class="content_text_area">
+                                <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우 -->
+                                <input type="text" id="request_memo" name="request_memo" class="content_text" placeholder="배송요청사항" value="매장 뒤에 세번째 냉동실 맨 아랫칸에 넣어주세요.">
+                                <span class="content_text_btn"></span>
+								<span class="content_text_error"></span>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label>배송시간 선택</label>
+                            </div>
+                            <div class="order_receiver_table">
+                                <div class="order_receiver_tr">
+                                    <div class="order_receiver_th th00">구분</div>
+                                    <div class="order_receiver_th th01"><span class="tit">오늘</span><br>11/10<span class="day">(화)</span></div>
+                                    <div class="order_receiver_th th02"><span class="tit">내일</span><br>11/11<span class="day">(수)</span></div>
+                                </div>
+                                <div class="order_receiver_tr">
+                                    <div class="order_receiver_td th00">1<span class="turn">회차</span> (10:00 ~ 13:00)</div>
+                                    <div class="order_receiver_td th01"><span class="finish">마감</span></div>
+                                    <div class="order_receiver_td th02"><span class="finish">마감</span></div>
+                                </div>
+                                <div class="order_receiver_tr">
+                                    <div class="order_receiver_td th00">2<span class="turn">회차</span> (11:00 ~ 14:00)</div>
+                                    <div class="order_receiver_td th01">
+                                        <div class="content_radio_area">
+                                            <input type="radio" id="request_time_1" name="request_time" value="1" checked required>
+                                            <label for="request_time_1"></label>
+                                        </div>
+                                    </div>
+                                    <div class="order_receiver_td th02"><span class="finish">마감</span></div>
+                                </div>
+                                <div class="order_receiver_tr">
+                                    <div class="order_receiver_td th00">3<span class="turn">회차</span> (14:00 ~ 17:00)</div>
+                                    <div class="order_receiver_td th01">
+                                        <div class="content_radio_area">
+                                            <input type="radio" id="request_time_2" name="request_time" value="2">
+                                            <label for="request_time_2"></label>
+                                        </div>
+                                    </div>
+                                    <div class="order_receiver_td th02">
+                                        <div class="content_radio_area">
+                                            <input type="radio" id="request_time_3" name="request_time" value="3">
+                                            <label for="request_time_3"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order_receiver_tr">
+                                    <div class="order_receiver_td th00">4<span class="turn">회차</span> (17:00 ~ 20:00)</div>
+                                    <div class="order_receiver_td th01">
+                                        <div class="content_radio_area">
+                                            <input type="radio" id="request_time_4" name="request_time" value="4">
+                                            <label for="request_time_4"></label>
+                                        </div>
+                                    </div>
+                                    <div class="order_receiver_td th02">
+                                        <div class="content_radio_area">
+                                            <input type="radio" id="request_time_5" name="request_time" value="5">
+                                            <label for="request_time_5"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label for="request_branch">배송지점</label>
+                            </div>
+                            <div class="content_text_con">
+                                식자재왕 포천점(031-0000-0000)
+                            </div>
+                        </article>
+
+                        <article class="or_de_btn_area">
+                            <div class="content_btn2_area cf">
+                                <button type="button" class="content_btn1" onclick="location.href='../../mw/mypage/order_claim_request.html';"><span>주문취소</span></button>
+                                <button type="submit" class="content_btn2"><span>주문 변경</span></button>
+                            </div>
+                        </article>
+                    </form>
                 </section>
             </div>
             

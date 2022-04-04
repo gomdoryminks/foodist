@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta property="og:url" content="">
-        <meta property="og:title" content="식자재왕 마이페이지">
+        <meta property="og:title" content="식자재왕 최근 본 상품">
         <meta property="og:type" content="website">
         <meta property="og:image" content="../../mw/img/logo_favicon.ico">
-        <meta property="og:description" content="식자재왕 마이페이지">
-		<title>식자재왕 마이페이지</title>
-		<meta name="description" content="식자재왕 마이페이지">
+        <meta property="og:description" content="식자재왕 최근 본 상품">
+		<title>식자재왕 최근 본 상품</title>
+		<meta name="description" content="식자재왕 최근 본 상품">
 		<meta name="author" content="minks">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no, address=no, email=no">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="header_center">
-                    <div class="header_tit">마이페이지</div>
+                    <div class="header_tit">최근 본 상품</div>
                 </div>
             </header>
             
@@ -102,70 +102,185 @@
 			
 			<!-- content -->
             <div class="content_area">
-                <section class="mypage_main">
-                    <article class="my_ma_user_area cf">
-                        <div class="my_ma_user_img" style="background-image: url('../img/mypage_main2x_img2.png');"></div>
-                        <div class="my_ma_user_txt">
-                            <div class="user_level">일반회원</div>
-                            <div class="user_name">
-                                <span>홍길동</span>님
-                                <a href="../../mw/mypage/modify_password.html">
-                                    <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                </a>
+                <section class="mypage_today">
+                    <article class="my_to_list_area">
+                        <form id="todayForm" name="todayForm" method="post" action="" onsubmit="return todaySubmit(this);">
+                            <div class="cart_goods_all_chk cf">
+                                <div class="content_chk_area">
+                                    <!-- data-chkname : 전체선택할 경우 선택할 체크박스 name 값 -->
+                                    <input type="checkbox" id="all_chk" name="all_chk" data-chkname="today_goods">
+                                    <label for="all_chk">전체선택</label>
+                                </div>
+                                <div class="content_btn1_area">
+                                    <button type="button" class="content_btn1"><span>전체삭제</span></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="my_ma_user_btn">
-                            <div class="content_btn1_area">
-                                <button type="button" class="content_btn1"><span>로그아웃</span></button>
+                            
+                            <ul class="content_goods_list cf">
+                                <!-- disable : 판매중단일 경우 -->
+                                <li>
+                                    <div class="content_goods_img">
+                                        <div class="content_chk_area">
+                                            <!-- required : 체크박스 필수일 경우 -->
+                                            <input type="checkbox" id="today_goods_1" name="today_goods" value="1">
+                                            <label for="today_goods_1"></label>
+                                        </div>
+                                        <a href="../../mw/goods/detail.html">
+                                            <img src="../img/goods_list2x_img.png" alt="goods_list_img">
+                                        </a>
+                                    </div>
+                                    <div class="content_goods_txt">
+                                        <button type="button" class="content_goods_btn">
+                                            <span><img src="../img/goods2x_delete.png" alt="goods_delete"></span>
+                                        </button>
+                                        <div class="content_goods_icon">
+                                            <img src="../img/goods2x_new.png" alt="goods_new">
+                                            <img src="../img/goods2x_frozen.png" alt="goods_frozen">
+                                        </div>
+                                        <div class="content_goods_name">
+                                            <a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+                                        </div>
+                                        <div class="content_goods_num cf">
+                                            <div class="content_goods_price">
+                                                <span class="goods_sprice"><span class="num">13,900</span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="content_goods_img">
+                                        <div class="content_chk_area">
+                                            <!-- required : 체크박스 필수일 경우 -->
+                                            <input type="checkbox" id="today_goods_2" name="today_goods" value="2">
+                                            <label for="today_goods_2"></label>
+                                        </div>
+                                        <a href="../../mw/goods/detail.html">
+                                            <img src="../img/goods_list2x_img2.png" alt="goods_list_img2">
+                                        </a>
+                                    </div>
+                                    <div class="content_goods_txt">
+                                        <button type="button" class="content_goods_btn">
+                                            <span><img src="../img/goods2x_delete.png" alt="goods_delete"></span>
+                                        </button>
+                                        <div class="content_goods_name">
+                                            <a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+                                        </div>
+                                        <div class="content_goods_num cf">
+                                            <div class="content_goods_price">
+                                                <span class="goods_sprice"><span class="num">13,900</span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="content_goods_img">
+                                        <div class="content_chk_area">
+                                            <!-- required : 체크박스 필수일 경우 -->
+                                            <input type="checkbox" id="today_goods_3" name="today_goods" value="3">
+                                            <label for="today_goods_3"></label>
+                                        </div>
+                                        <a href="../../mw/goods/detail.html">
+                                            <img src="../img/goods_list2x_img3.png" alt="goods_list_img3">
+                                        </a>
+                                    </div>
+                                    <div class="content_goods_txt">
+                                        <button type="button" class="content_goods_btn">
+                                            <span><img src="../img/goods2x_delete.png" alt="goods_delete"></span>
+                                        </button>
+                                        <div class="content_goods_icon">
+                                            <img src="../img/goods2x_best.png" alt="goods_best">
+                                            <img src="../img/goods2x_cool.png" alt="goods_cool">
+                                        </div>
+                                        <div class="content_goods_name">
+                                            <a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+                                        </div>
+                                        <div class="content_goods_num cf">
+                                            <div class="content_goods_price">
+                                                <span class="goods_dtxt">할인가</span>
+                                                <span class="goods_dprice"><span class="num">13,900</span>원</span>
+                                                <span class="goods_pprice"><span class="num">13,900</span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="content_goods_img">
+                                        <a href="../../mw/goods/detail.html">
+                                            <img src="../img/goods_list2x_img4.png" alt="goods_list_img4">
+                                        </a>
+                                        <div class="content_goods_soldout">품절</div>
+                                    </div>
+                                    <div class="content_goods_txt">
+                                        <button type="button" class="content_goods_btn">
+                                            <span><img src="../img/goods2x_delete.png" alt="goods_delete"></span>
+                                        </button>
+                                        <div class="content_goods_icon">
+                                            <img src="../img/goods2x_special.png" alt="goods_special">
+                                            <img src="../img/goods2x_roomtemp.png" alt="goods_roomtemp">
+                                        </div>
+                                        <div class="content_goods_name">
+                                            <a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+                                        </div>
+                                        <div class="content_goods_num cf">
+                                            <div class="content_goods_price">
+                                                <span class="goods_sprice"><span class="num">13,900</span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="disable">
+                                    <div class="content_goods_img">
+                                        <a href="../../mw/goods/detail.html">
+                                            <img src="../img/goods_list2x_img5.png" alt="goods_list_img5">
+                                        </a>
+                                        <div class="content_goods_soldout">판매중단</div>
+                                    </div>
+                                    <div class="content_goods_txt">
+                                        <button type="button" class="content_goods_btn">
+                                            <span><img src="../img/goods2x_delete.png" alt="goods_delete"></span>
+                                        </button>
+                                        <div class="content_goods_name">
+                                            <a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+                                        </div>
+                                        <div class="content_goods_num cf">
+                                            <div class="content_goods_price">
+                                                <span class="goods_sprice">판매중단</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <ul class="content_page_list cf">
+                                <!-- page_left : 이전 페이지로 이동할 경우, page_right : 다음 페이지로 이동할 경우, on : 해당 페이지일 경우, disable : 페이징을 비활성화 할 경우 -->
+                                <li class="page_left">
+                                    <a href="#"></a>
+                                </li>
+                                <li class="on">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li class="page_right">
+                                    <a href="#"></a>
+                                </li>
+                            </ul>
+                            
+                            <div class="content_btn2_area cf">
+                                <button type="button" class="content_btn1" onclick="todayDelete();"><span>선택삭제</span></button>
+                                <button type="submit" class="content_btn2"><span>장바구니</span></button>
                             </div>
-                        </div>
-                    </article>
-                    
-                    <article class="my_ma_list_area">
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">나의 쇼핑정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/order_list.html">주문목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/order_claim.html">취소/반품 목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/coupon.html">쿠폰<span class="dot"></span><!--<span class="cnt">999+</span>--></a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/wish.html">관심상품</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/today.html">최근 본 상품</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">개인정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/modify_password.html">회원정보 수정</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/address.html">배송지 관리</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">고객센터</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/inquiry.html">1:1문의 내역</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/cscenter/main.html">고객센터</a>
-                                </li>
-                            </ul>
-                        </div>
+                        </form>
                     </article>
                 </section>
             </div>

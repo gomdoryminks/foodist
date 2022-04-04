@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta property="og:url" content="">
-        <meta property="og:title" content="식자재왕 마이페이지">
+        <meta property="og:title" content="식자재왕 회원정보 수정">
         <meta property="og:type" content="website">
         <meta property="og:image" content="../../mw/img/logo_favicon.ico">
-        <meta property="og:description" content="식자재왕 마이페이지">
-		<title>식자재왕 마이페이지</title>
-		<meta name="description" content="식자재왕 마이페이지">
+        <meta property="og:description" content="식자재왕 회원정보 수정">
+		<title>식자재왕 회원정보 수정</title>
+		<meta name="description" content="식자재왕 회원정보 수정">
 		<meta name="author" content="minks">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no, address=no, email=no">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="header_center">
-                    <div class="header_tit">마이페이지</div>
+                    <div class="header_tit">회원정보 수정</div>
                 </div>
             </header>
             
@@ -102,75 +102,362 @@
 			
 			<!-- content -->
             <div class="content_area">
-                <section class="mypage_main">
-                    <article class="my_ma_user_area cf">
-                        <div class="my_ma_user_img" style="background-image: url('../img/mypage_main2x_img2.png');"></div>
-                        <div class="my_ma_user_txt">
-                            <div class="user_level">일반회원</div>
-                            <div class="user_name">
-                                <span>홍길동</span>님
-                                <a href="../../mw/mypage/modify_password.html">
-                                    <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                </a>
+                <section class="mypage_modify">
+                    <article class="my_mo_con_area">
+                        <!-- validForm : 유효성 체크할 경우 -->
+                        <form id="modifyForm" name="modifyForm" class="validForm" method="post" action="../../mw/mypage/main.html" onsubmit="return modifySubmit(this);">
+                            <div class="my_mo_con_box">
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_label_area required">
+                                    <div class="tit">이름</div>
+                                    <div class="con">홍길동</div>
+                                </div>
+
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_label_area required">
+                                    <div class="tit">생년월일</div>
+                                    <div class="con">19870120</div>
+                                </div>
+
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_label_area required">
+                                    <div class="tit">성별</div>
+                                    <div class="con">여성</div>
+                                </div>
+
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_label_area required">
+                                    <div class="tit">휴대폰번호</div>
+                                    <div class="con">010-1234-5678</div>
+                                    <div class="content_btn1_area">
+                                        <button type="button" class="content_btn1"><span>변경</span></button>
+                                    </div>
+                                </div>
+
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_label_area required">
+                                    <div class="tit">아이디</div>
+                                    <div class="con">wang365</div>
+                                </div>
+                                
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_text_tit required">
+                                    <label for="old_password">비밀번호</label>
+                                </div>
+                                <!-- content_tchk_area : 텍스트박스 + 체크박스일 경우 -->
+                                <div class="content_text_area content_tchk_area">
+                                    <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                    <input type="password" id="old_password" name="old_password" class="content_text" placeholder="비밀번호" required>
+                                    <span class="content_text_btn"></span>
+                                    <span class="content_text_error"></span>
+                                    <div class="content_chk_area">
+                                        <input type="checkbox" id="password_change" name="password_change" onclick="checkChgPw(this);">
+                                        <label for="password_change">비밀번호 변경</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="bodyPw">
+                                    <!-- required : 필수 입력 항목일 경우 -->
+                                    <div class="content_text_tit required">
+                                        <label for="password">새 비밀번호</label>
+                                    </div>
+                                    <div class="content_text_area">
+                                        <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                        <input type="password" id="password" name="password" class="content_text" placeholder="새 비밀번호" data-type="password" required>
+                                        <span class="content_text_btn"></span>
+                                        <span class="content_text_error"></span>
+                                    </div>
+
+                                    <!-- required : 필수 입력 항목일 경우 -->
+                                    <div class="content_text_tit required">
+                                        <label for="password2">새 비밀번호 확인</label>
+                                    </div>
+                                    <div class="content_text_area">
+                                        <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                        <input type="password" id="password2" name="password2" class="content_text" placeholder="새 비밀번호 확인" data-type="password2" required>
+                                        <span class="content_text_btn"></span>
+                                        <span class="content_text_error"></span>
+                                    </div>
+                                </div>
+
+                                <!-- required : 필수 입력 항목일 경우 -->
+                                <div class="content_text_tit required">
+                                    <label for="email">이메일 주소</label>
+                                </div>
+                                <!-- content_temail_area : 텍스트 + 이메일 셀렉트박스일 경우 -->
+                                <div class="content_text_area content_temail_area">
+                                    <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                    <input type="email" id="email" name="email" class="content_text" placeholder="이메일 주소" data-type="email" value="abcd1234@gmail.com" required>
+                                    <span class="content_text_btn"></span>
+                                    <span class="content_text_error"></span>
+                                    <div class="content_select_area2">
+                                        <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                        <div class="select_tit"></div>
+                                        <ul class="select_list cf">
+                                            <li>
+                                                <input type="radio" id="email_domain" name="email_domain" value="">
+                                                <label for="email_domain">직접입력</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="email_domain_1" name="email_domain" value="@gmail.com">
+                                                <label for="email_domain_1">@gmail.com</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="email_domain_2" name="email_domain" value="@naver.com">
+                                                <label for="email_domain_2">@naver.com</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="email_domain_3" name="email_domain" value="@daum.net">
+                                                <label for="email_domain_3">@daum.net</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+								<!-- required : 필수 입력 항목일 경우 -->
+								<div class="content_text_tit required">
+									<label for="sub_address">주소</label>
+								</div>
+								<!-- content_zipcode_area : 우편번호 입력 + 주소검색 버튼일 경우 -->
+								<div class="content_zipcode_area">
+									<div class="content_label_area">
+										<div class="tit">우편번호</div>
+										<div class="con">12345</div>
+									</div>
+									<div class="content_btn4_area">
+										<button type="button" class="content_btn1"><span>주소검색</span></button>
+									</div>
+								</div>
+								<div class="content_label_area required">
+									<div class="con block_con">서울특별시 성동구 성수동 성수1가 성수12길12</div>
+								</div>
+								<div class="content_text_area">
+									<!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우 -->
+									<input type="text" id="sub_address" name="sub_address" class="content_text" placeholder="상세 주소를 입력해 주세요" required>
+									<span class="content_text_btn"></span>
+									<span class="content_text_error"></span>
+								</div>
+
+                                <div class="content_btn4_area block_btn4_area content_mt16 content_mb32">
+                                    <button type="button" class="content_btn1" onclick="openLayer('mod_business_layer');"><span>사업자 정보 수정</span></button>
+                                </div>
+                                
+								<div class="content_text_tit">
+									<label>광고 정보 수신여부</label>
+								</div>
+								<div class="content_label_area">
+									<div class="con block_con">
+										<div class="content_chk_area">
+											<input type="checkbox" id="marketing_agreement" name="marketing_agreement" checked>
+											<label for="marketing_agreement">(선택)마케팅 활용동의</label>
+										</div>
+									</div>
+								</div>
+								<div class="content_label_area">
+									<div class="con block_con">
+										<div class="content_chk_area">
+											<input type="checkbox" id="email_agreement" name="email_agreement" checked>
+											<label for="email_agreement">이메일</label>
+										</div>
+									</div>
+								</div>
+								<div class="content_label_area">
+									<div class="con block_con">
+										<div class="content_chk_area">
+											<input type="checkbox" id="sms_agreement" name="sms_agreement">
+											<label for="sms_agreement">SMS</label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="my_mo_con_btn">
+                                    <div class="content_btn1_area">
+                                        <button type="button" class="content_btn1" onclick="alertLayer('회원탈퇴는 PC에서만 하실 수 있습니다.','');"><span>회원탈퇴</span></button>
+                                    </div>
+                                </div>
+							</div>
+                            
+                            <ul class="content_member_explain cf">
+                                <li>
+									<span class="text_indent">1. 광고 정보 수신거부와 관계없이 광고나 영리성 목적 외의 주문/배송 서비스내용, 회사의 주요 정책 관련 변경 등 고객 고지 내용은 정상 발송됩니다.</span>
+								</li>
+                                <li>
+									<span class="text_indent">2. 광고정보 수신거부 전 이메일 또는 문자 메시지가 있는 경우 약 일주일 동안 발송될 수 있습니다.</span>
+								</li>
+                            </ul>
+                            
+                            <div class="content_btn2_area cf">
+                                <button type="button" class="content_btn1" onclick="history.back();"><span>취소</span></button>
+                                <button type="submit" class="content_btn2"><span>확인</span></button>
                             </div>
-                        </div>
-                        <div class="my_ma_user_btn">
-                            <div class="content_btn1_area">
-                                <button type="button" class="content_btn1"><span>로그아웃</span></button>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="my_ma_list_area">
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">나의 쇼핑정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/order_list.html">주문목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/order_claim.html">취소/반품 목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/coupon.html">쿠폰<span class="dot"></span><!--<span class="cnt">999+</span>--></a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/wish.html">관심상품</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/today.html">최근 본 상품</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">개인정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/modify_password.html">회원정보 수정</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/address.html">배송지 관리</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">고객센터</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/inquiry.html">1:1문의 내역</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/cscenter/main.html">고객센터</a>
-                                </li>
-                            </ul>
-                        </div>
+                        </form>
                     </article>
                 </section>
             </div>
             
             <!-- layer -->
+            <div class="content_area layer_content_area layer_all_area" id="mod_business_layer">
+                <div class="layer_box">
+                    <div class="layer_header cf">
+                        <div class="header_tit">사업자 정보 수정</div>
+
+                        <div class="header_close">
+                            <img src="../img/close2x.png" alt="close" class="layer_close_btn">
+                        </div>
+                    </div>
+                    
+                    <div class="layer_nav">
+						<ul class="nav_list cf">
+							<!-- on : 해당 메뉴 페이지일 경우, disable : 메뉴를 비활성화 할 경우 -->
+							<li class="nav_menu">
+								<a href="javascript:void(0);" onclick="openLayer('goods_category_layer');">
+									<div class="nav_img"></div>
+									<div class="nav_tit">카테고리</div>
+								</a>
+							</li>
+							<li class="nav_my on">
+								<a href="../../mw/mypage/main.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">마이페이지</div>
+								</a>
+							</li>
+							<li class="nav_home">
+								<a href="../../mw/index.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">홈</div>
+								</a>
+							</li>
+							<li class="nav_favorite">
+								<a href="../../mw/mypage/wish.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">관심상품</div>
+								</a>
+							</li>
+							<li class="nav_cart">
+								<a href="../../mw/order/cart.html">
+									<div class="nav_img">
+										<div class="nav_cart_cnt">3</div>
+									</div>
+									<div class="nav_tit">장바구니</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+                    <div class="layer_content">
+                        <section class="mypage_modify">
+                            <!-- validForm : 유효성 체크할 경우 -->
+                            <form id="modBusinessForm" name="modBusinessForm" class="validForm" method="post" action="" enctype="multipart/form-data" onsubmit="return modBusinessSubmit(this);">
+                                <div class="my_mo_layer_box">
+                                    <!-- required : 필수 입력 항목일 경우 -->
+                                    <div class="content_text_tit required">
+                                        <label>사업자 번호</label>
+                                    </div>
+                                    <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                    <div class="content_text_area2">
+                                        <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                        <div class="content_text">
+                                            <input type="tel" id="business_no_0" name="business_no[0]" value="123" size="3" maxlength="3" required numberonly>
+                                            <span>-</span>
+                                            <input type="tel" id="business_no_1" name="business_no[1]" value="12" size="2" maxlength="2" required numberonly>
+                                            <span>-</span>
+                                            <input type="tel" id="business_no_2" name="business_no[2]" value="12345" size="5" maxlength="5" required numberonly>
+                                        </div>
+                                        <span class="content_text_error"></span>
+                                    </div>
+
+                                    <!-- required : 필수 입력 항목일 경우 -->
+                                    <div class="content_text_tit required">
+                                        <label>사업자등록증</label>
+                                    </div>
+                                    <div class="content_file_area">
+                                        <!-- content_file_btn : 첨부파일 버튼일 경우, content_file_item : 첨부파일 이미지일 경우 -->
+                                        <label class="content_file_btn">
+                                            <!-- data-name : 첨부파일 name 값 (기본값 : content_file), data-cnt : 첨부파일 최대 개수 (기본값 : 1), data-size : 첨부파일 최대 용량 (단위 : MB) -->
+                                            <input type="file" class="content_file" data-name="business_file" required>
+                                            <span class="content_file_txt">파일선택</span>
+                                        </label>
+                                    </div>
+                                    <div class="swiper-container content_file_slide">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide"><img src="../../mw/img/mypage_main2x_img2.png" alt="mypage_main_img2"></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- required : 필수 입력 항목일 경우 -->
+                                    <div class="content_text_tit required">
+                                        <label>업종</label>
+                                    </div>
+                                    <div class="content_select_area">
+                                        <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                        <div class="select_tit"></div>
+                                        <ul class="select_list cf">
+                                            <li>
+                                                <input type="radio" id="business_type" name="business_type" value="" required>
+                                                <label for="business_type">선택</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="business_type_1" name="business_type" value="1">
+                                                <label for="business_type_1">업종1</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="business_type_2" name="business_type" value="2">
+                                                <label for="business_type_2">업종2</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="business_type_3" name="business_type" value="3">
+                                                <label for="business_type_3">업종3</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="business_type_4" name="business_type" value="4">
+                                                <label for="business_type_4">업종4</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="content_text_tit">
+                                        <label>사업장 전화번호</label>
+                                    </div>
+                                    <!-- content_tel_area : 연락처 입력형식이 셀렉트박스 + 텍스트일 경우 -->
+                                    <div class="content_tel_area">
+                                        <div class="content_select_area">
+                                            <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                            <div class="select_tit"></div>
+                                            <ul class="select_list cf">
+                                                <li>
+                                                    <input type="radio" id="business_tel_0_1" name="business_tel[0]" value="">
+                                                    <label for="business_tel_0_1">선택</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="business_tel_0_2" name="business_tel[0]" value="010" checked>
+                                                    <label for="business_tel_0_2">010</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                        <div class="content_text_area2">
+                                            <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                            <div class="content_text">
+                                                <span>-</span>
+                                                <input type="tel" id="business_tel_1" name="business_tel[1]" size="4" maxlength="4" value="1234" numberonly>
+                                                <span>-</span>
+                                                <input type="tel" id="business_tel_2" name="business_tel[2]" size="4" maxlength="4" value="5678" numberonly>
+                                            </div>
+                                            <span class="content_text_error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="content_btn2_area cf">
+                                    <button type="button" class="content_btn1" onclick="closeLayer('mod_business_layer');"><span>취소</span></button>
+                                    <button type="submit" class="content_btn2"><span>확인</span></button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
 			<div class="content_area layer_content_area layer_all_area" id="goods_category_layer">
                 <div class="layer_box">
                     <div class="layer_header cf">
@@ -528,7 +815,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="content_area layer_content_area" id="alert_layer">
                 <div class="layer_mask"></div>
                 

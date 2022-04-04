@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta property="og:url" content="">
-        <meta property="og:title" content="식자재왕 마이페이지">
+        <meta property="og:title" content="식자재왕 반품신청">
         <meta property="og:type" content="website">
         <meta property="og:image" content="../../mw/img/logo_favicon.ico">
-        <meta property="og:description" content="식자재왕 마이페이지">
-		<title>식자재왕 마이페이지</title>
-		<meta name="description" content="식자재왕 마이페이지">
+        <meta property="og:description" content="식자재왕 반품신청">
+		<title>식자재왕 반품신청</title>
+		<meta name="description" content="식자재왕 반품신청">
 		<meta name="author" content="minks">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no, address=no, email=no">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="header_center">
-                    <div class="header_tit">마이페이지</div>
+                    <div class="header_tit">반품신청</div>
                 </div>
             </header>
             
@@ -102,71 +102,199 @@
 			
 			<!-- content -->
             <div class="content_area">
-                <section class="mypage_main">
-                    <article class="my_ma_user_area cf">
-                        <div class="my_ma_user_img" style="background-image: url('../img/mypage_main2x_img2.png');"></div>
-                        <div class="my_ma_user_txt">
-                            <div class="user_level">일반회원</div>
-                            <div class="user_name">
-                                <span>홍길동</span>님
-                                <a href="../../mw/mypage/modify_password.html">
-                                    <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                </a>
+                <section class="order_detail">
+                    <!-- validForm : 유효성 체크할 경우 -->
+                    <form id="orderClaimForm" name="orderClaimForm" class="validForm" method="post" action="../../mw/mypage/order_list.html" enctype="multipart/form-data" onsubmit="return orderClaimSubmit(this);">
+                        <article class="or_de_goods_area">
+                            <div class="or_de_tit">
+                                YYYY-MM-DD[001-201124-00010]
+                                <p class="state">구매확정</p>
                             </div>
-                        </div>
-                        <div class="my_ma_user_btn">
-                            <div class="content_btn1_area">
-                                <button type="button" class="content_btn1"><span>로그아웃</span></button>
+                            
+                            <ul class="order_goods_list2 cf">
+                                <li>
+                                    <div class="order_goods_info">
+                                        <div class="order_goods_name">
+                                            <div class="order_goods_chk">
+                                                <div class="content_chk_area">
+													<!-- required : 체크박스 필수일 경우 -->
+                                                    <input type="checkbox" id="claim_goods_1" name="claim_goods" value="1" class="required">
+                                                    <label for="claim_goods_1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_detail_img.png" alt="order_detail_img">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <a href="../../mw/goods/detail.html">
+                                                    [식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="order_goods_sel cf">
+                                            <div class="content_select_area">
+                                                <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                                <div class="select_tit"></div>
+                                                <ul class="select_list cf">
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_1_ea_1" name="claim_goods_1_ea" value="1">
+                                                        <label for="claim_goods_1_ea_1">1</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_1_ea_2" name="claim_goods_1_ea" value="2">
+                                                        <label for="claim_goods_1_ea_2">2</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_1_ea_3" name="claim_goods_1_ea" value="3">
+                                                        <label for="claim_goods_1_ea_3">3</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_1_ea_4" name="claim_goods_1_ea" value="4">
+                                                        <label for="claim_goods_1_ea_4">4</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_1_ea_5" name="claim_goods_1_ea" value="5">
+                                                        <label for="claim_goods_1_ea_5">5</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="or_de_item_con"><span>/100</span>개</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="order_goods_info">
+                                        <div class="order_goods_name">
+                                            <div class="order_goods_chk">
+                                                <div class="content_chk_area">
+													<!-- required : 체크박스 필수일 경우 -->
+                                                    <input type="checkbox" id="claim_goods_2" name="claim_goods" value="2" class="required">
+                                                    <label for="claim_goods_2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_detail_img2.png" alt="order_detail_img2">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <a href="../../mw/goods/detail.html">
+                                                    [식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="order_goods_sel cf">
+                                            <div class="content_select_area">
+                                                <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                                <div class="select_tit"></div>
+                                                <ul class="select_list cf">
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_2_ea_1" name="claim_goods_2_ea" value="1">
+                                                        <label for="claim_goods_2_ea_1">1</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_2_ea_2" name="claim_goods_2_ea" value="2">
+                                                        <label for="claim_goods_2_ea_2">2</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_2_ea_3" name="claim_goods_2_ea" value="3">
+                                                        <label for="claim_goods_2_ea_3">3</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_2_ea_4" name="claim_goods_2_ea" value="4">
+                                                        <label for="claim_goods_2_ea_4">4</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="claim_goods_2_ea_5" name="claim_goods_2_ea" value="5">
+                                                        <label for="claim_goods_2_ea_5">5</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="or_de_item_con"><span>/100</span>개</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </article>
+                        
+                        <article class="or_de_reason_area">
+                            <div class="or_de_tit">반품 사유</div>
+                            
+                            <div class="content_select_area content_mb8">
+                                <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                <div class="select_tit"></div>
+                                <ul class="select_list cf">
+                                    <li>
+                                        <input type="radio" id="claim_reason" name="claim_reason" value="" required>
+                                        <label for="claim_reason">사유를 선택해주세요</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="claim_reason_1" name="claim_reason" value="1">
+                                        <label for="claim_reason_1">사유1</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="claim_reason_2" name="claim_reason" value="2">
+                                        <label for="claim_reason_2">사유2</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="claim_reason_3" name="claim_reason" value="3">
+                                        <label for="claim_reason_3">사유3</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="claim_reason_4" name="claim_reason" value="4">
+                                        <label for="claim_reason_4">사유4</label>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </article>
-                    
-                    <article class="my_ma_list_area">
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">나의 쇼핑정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/order_list.html">주문목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/order_claim.html">취소/반품 목록</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/coupon.html">쿠폰<span class="dot"></span><!--<span class="cnt">999+</span>--></a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/wish.html">관심상품</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/today.html">최근 본 상품</a>
-                                </li>
-                            </ul>
-                        </div>
+                            
+                            <div class="content_textarea_area">
+                                <textarea id="claim_memo" name="claim_memo" class="content_textarea" placeholder="반품 신청 사유를 기재하지 않으면 반품 신청이 거절될 수 있습니다" required></textarea>
+                            </div>
+                            
+                            <div class="content_text_tit">
+                                <label>첨부파일</label>
+                            </div>
+                            <div class="content_file_area">
+                                <!-- content_file_btn : 첨부파일 버튼일 경우, content_file_item : 첨부파일 이미지일 경우 -->
+                                <label class="content_file_btn">
+                                    <!-- data-name : 첨부파일 name 값 (기본값 : content_file), data-cnt : 첨부파일 최대 개수 (기본값 : 1), data-size : 첨부파일 최대 용량 (단위 : MB) -->
+                                    <input type="file" class="content_file" accept="image/*" data-name="claim_file" data-cnt="5" data-size="10">
+                                    <span class="content_file_txt">파일선택</span>
+                                </label>
+                            </div>
+                            <div class="content_file_explain">이미지 파일만 첨부 가능합니다. (최대 5장, 10mb 이내)</div>
+                            
+                            <div class="content_btn2_area content_mt24 cf">
+                                <button type="button" class="content_btn4 all_btn" onclick="return orderClaimPrice();"><span>계산하기</span></button>
+                            </div>
+                        </article>
                         
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">개인정보</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/modify_password.html">회원정보 수정</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/mypage/address.html">배송지 관리</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="my_ma_list_item">
-                            <div class="my_ma_list_tit">고객센터</div>
-                            <ul class="my_ma_list cf">
-                                <li>
-                                    <a href="../../mw/mypage/inquiry.html">1:1문의 내역</a>
-                                </li>
-                                <li>
-                                    <a href="../../mw/cscenter/main.html">고객센터</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
+                        <article class="or_de_result_area" id="order_claim_price">
+                            <div class="or_de_tit">환불예정금액</div>
+                            
+                            <div class="order_result_payprice cf">
+                                <p class="or_de_item_con"><span id="claim_price">22,865,433</span>원</p>
+                            </div>
+                            
+                            <div class="order_result_agreement">
+                                <div class="content_chk_area">
+                                    <input type="checkbox" id="claim_agreement" name="claim_agreement" required>
+                                    <label for="claim_agreement">주문취소, 재결제 이용약관에 동의합니다.<br>(전자상거래법 제 8조 2항)</label>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="or_de_btn_area">
+                            <div class="content_btn2_area cf">
+                                <button type="button" class="content_btn3" onclick="location.href='../../mw/mypage/order_list.html';"><span>주문목록</span></button>
+                                <button type="submit" class="content_btn2"><span>반품 신청</span></button>
+                            </div>
+                        </article>
+                    </form>
                 </section>
             </div>
             

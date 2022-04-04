@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="식자재왕 상품 리스트">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../../mw/img/logo_favicon.ico">
+        <meta property="og:description" content="식자재왕 상품 리스트">
+		<title>식자재왕 상품 리스트</title>
+		<meta name="description" content="식자재왕 상품 리스트">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<link rel="shortcut icon" href="../../mw/img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="../../mw/img/logo_favicon.ico">
+		
+		<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/common.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/goods.css" type="text/css" rel="stylesheet">
+		<link href="../../css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../mw/js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <header class="header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_left">
+                    <div class="header_back">
+                        <a href="javascript:history.back();"></a>
+                    </div>
+                </div>
+                
+                <div class="header_center">
+                    <div class="header_logo">
+                        <a href="../../mw/index.html">
+                            <img src="../img/logo2x.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header_right">
+                    <div class="header_select">
+                        <div class="content_select_area2">
+                            <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                            <div class="select_tit"></div>
+                            <ul class="select_list cf">
+                                <li>
+                                    <input type="radio" id="branch_1" name="branch" value="1">
+                                    <label for="branch_1">우리들분식(포천)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_2" name="branch" value="2">
+                                    <label for="branch_2">너네들분식(신월)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_3" name="branch" value="3">
+                                    <label for="branch_3">모두의분식(강남)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_4" name="branch" value="4">
+                                    <label for="branch_4">우리분식(상암)</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- nav -->
+            <nav class="nav">
+                <h1 class="not_view">nav</h1>
+                
+                <ul class="nav_list cf">
+                    <!-- on : 해당 메뉴 페이지일 경우, disable : 메뉴를 비활성화 할 경우 -->
+                    <li class="nav_menu">
+                        <a href="javascript:void(0);" onclick="openLayer('goods_category_layer');">
+                            <div class="nav_img"></div>
+                            <div class="nav_tit">카테고리</div>
+                        </a>
+                    </li>
+                    <li class="nav_my">
+                        <a href="../../mw/mypage/main.html">
+                            <div class="nav_img"></div>
+                            <div class="nav_tit">마이페이지</div>
+                        </a>
+                    </li>
+                    <li class="nav_home">
+                        <a href="../../mw/index.html">
+                            <div class="nav_img"></div>
+                            <div class="nav_tit">홈</div>
+                        </a>
+                    </li>
+                    <li class="nav_favorite">
+                        <a href="../../mw/mypage/wish.html">
+                            <div class="nav_img"></div>
+                            <div class="nav_tit">관심상품</div>
+                        </a>
+                    </li>
+                    <li class="nav_cart">
+                        <a href="../../mw/order/cart.html">
+                            <div class="nav_img">
+                                <div class="nav_cart_cnt">3</div>
+                            </div>
+                            <div class="nav_tit">장바구니</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+			
+			<!-- content -->
+            <div class="content_area">
+                <section class="goods_list">                    
+                    <article class="go_li_header_area">
+                        <div class="go_li_header">
+                            <div class="header_center">
+                                <div class="header_tit">김치/젓갈 (<span class="num">48</span>)</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="go_li_path_area">
+                        <div class="goods_path_first">
+                            <a href="../../mw/index.html"><img src="../img/breadcrumbs2x.png" alt="breadcrumbs"></a>
+                        </div>
+                        <div class="goods_path_second">
+                            <a href="#">1depth</a>
+                        </div>
+                        <div class="goods_path_third">
+                            <div class="content_select_area2">
+                                <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                <div class="select_tit"></div>
+                                <ul class="select_list cf">
+                                    <li>
+                                        <input type="radio" id="goods_category_1" name="goods_category" value="1">
+                                        <label for="goods_category_1" onclick="location.href='../../mw/goods/list.html';">김치/젓갈 (48)</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="goods_category_2" name="goods_category" value="2">
+                                        <label for="goods_category_2" onclick="location.href='../../mw/goods/list.html';">김치/만두 (48)</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="goods_category_3" name="goods_category" value="3">
+                                        <label for="goods_category_3" onclick="location.href='../../mw/goods/list.html';">김치/찌게 (48)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="go_li_list_area">
+                        <div class="goods_list_top go_li_list_top">
+							<div class="goods_list_order go_li_list_order cf">
+								<div class="content_select_area2">
+									<!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+									<div class="select_tit"></div>
+									<ul class="select_list cf">
+										<li>
+											<input type="radio" id="goods_order_1" name="goods_order" value="1">
+											<label for="goods_order_1">인기상품순</label>
+										</li>
+										<li>
+											<input type="radio" id="goods_order_2" name="goods_order" value="2">
+											<label for="goods_order_2">낮은가격순</label>
+										</li>
+										<li>
+											<input type="radio" id="goods_order_3" name="goods_order" value="3">
+											<label for="goods_order_3">높은가격순</label>
+										</li>
+									</ul>
+								</div>
+								<div class="goods_viewtype_area cf">
+								    <!-- on : 리스트 타입이 해당 타입일 경우 -->
+									<a href="../../mw/goods/list2.html" class="goods_viewtype_thumb_btn"></a>
+									<a href="../../mw/goods/list.html" class="goods_viewtype_list_btn on"></a>
+								</div>
+							</div>
+						</div>
+                        
+						<ul class="content_goods_list cf">
+							<!-- disable : 판매중단일 경우 -->
+							<li>
+								<div class="content_goods_img">
+									<a href="../../mw/goods/detail.html">
+										<img src="../img/goods_list2x_img.png" alt="goods_list_img">
+									</a>
+								</div>
+								<div class="content_goods_txt">
+									<div class="content_goods_icon">
+										<img src="../img/goods2x_new.png" alt="goods_new">
+										<img src="../img/goods2x_frozen.png" alt="goods_frozen">
+									</div>
+									<div class="content_goods_name">
+										<a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+									</div>
+									<div class="content_goods_num cf">
+										<div class="content_goods_price">
+											<span class="goods_sprice"><span class="num">13,900</span>원</span>
+										</div>
+										<div class="content_goods_btn">
+											<!-- on : 카트에 담거나 찜했을 경우 -->
+											<button type="button" class="content_goods_cart_btn"></button>
+											<button type="button" class="content_goods_favorite_btn"></button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="content_goods_img">
+									<a href="../../mw/goods/detail.html">
+										<img src="../img/goods_list2x_img2.png" alt="goods_list_img2">
+									</a>
+								</div>
+								<div class="content_goods_txt">
+									<div class="content_goods_name">
+										<a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+									</div>
+									<div class="content_goods_num cf">
+										<div class="content_goods_price">
+											<span class="goods_sprice"><span class="num">13,900</span>원</span>
+										</div>
+										<div class="content_goods_btn">
+											<!-- on : 카트에 담거나 찜했을 경우 -->
+											<button type="button" class="content_goods_cart_btn"></button>
+											<button type="button" class="content_goods_favorite_btn"></button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="content_goods_img">
+									<a href="../../mw/goods/detail.html">
+										<img src="../img/goods_list2x_img3.png" alt="goods_list_img3">
+									</a>
+								</div>
+								<div class="content_goods_txt">
+									<div class="content_goods_icon">
+										<img src="../img/goods2x_best.png" alt="goods_best">
+										<img src="../img/goods2x_cool.png" alt="goods_cool">
+									</div>
+									<div class="content_goods_name">
+										<a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+									</div>
+									<div class="content_goods_num cf">
+										<div class="content_goods_price">
+											<span class="goods_dtxt">할인가</span>
+											<span class="goods_dprice"><span class="num">13,900</span>원</span>
+											<span class="goods_pprice"><span class="num">13,900</span>원</span>
+										</div>
+										<div class="content_goods_btn">
+											<!-- on : 카트에 담거나 찜했을 경우 -->
+											<button type="button" class="content_goods_cart_btn"></button>
+											<button type="button" class="content_goods_favorite_btn"></button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="content_goods_img">
+									<a href="../../mw/goods/detail.html">
+										<img src="../img/goods_list2x_img4.png" alt="goods_list_img4">
+									</a>
+									<div class="content_goods_soldout">품절</div>
+								</div>
+								<div class="content_goods_txt">
+									<div class="content_goods_icon">
+										<img src="../img/goods2x_special.png" alt="goods_special">
+										<img src="../img/goods2x_roomtemp.png" alt="goods_roomtemp">
+									</div>
+									<div class="content_goods_name">
+										<a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+									</div>
+									<div class="content_goods_num cf">
+										<div class="content_goods_price">
+											<span class="goods_sprice"><span class="num">13,900</span>원</span>
+										</div>
+										<div class="content_goods_btn">
+											<!-- on : 카트에 담거나 찜했을 경우 -->
+											<button type="button" class="content_goods_favorite_btn"></button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="disable">
+								<div class="content_goods_img">
+									<a href="../../mw/goods/detail.html">
+										<img src="../img/goods_list2x_img5.png" alt="goods_list_img5">
+									</a>
+									<div class="content_goods_soldout">판매중단</div>
+								</div>
+								<div class="content_goods_txt">
+									<div class="content_goods_name">
+										<a href="../../mw/goods/detail.html">[브랜드명] 상품명 노출영역. 길어지는 경우 2줄까지. 초과 시 자름</a>
+									</div>
+									<div class="content_goods_num cf">
+										<div class="content_goods_price">
+											<span class="goods_sprice">판매중단</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="content_page_list cf">
+							<!-- page_left : 이전 페이지로 이동할 경우, page_right : 다음 페이지로 이동할 경우, on : 해당 페이지일 경우, disable : 페이징을 비활성화 할 경우 -->
+							<li class="page_left">
+								<a href="#"></a>
+							</li>
+							<li class="on">
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li class="page_right">
+								<a href="#"></a>
+							</li>
+						</ul>
+                    </article>
+                </section>
+            </div>            
+            
+            <!-- layer -->
+			<div class="content_area layer_content_area layer_all_area" id="goods_category_layer">
+                <div class="layer_box">
+                    <div class="layer_header cf">
+                        <div class="header_close">
+                            <img src="../img/close2x.png" alt="close" class="layer_close_btn">
+                        </div>
+                    </div>
+
+					<div class="layer_nav">
+						<ul class="nav_list cf">
+							<!-- on : 해당 메뉴 페이지일 경우, disable : 메뉴를 비활성화 할 경우 -->
+							<li class="nav_menu on">
+								<a href="javascript:void(0);" onclick="openLayer('goods_category_layer');">
+									<div class="nav_img"></div>
+									<div class="nav_tit">카테고리</div>
+								</a>
+							</li>
+							<li class="nav_my">
+								<a href="../../mw/mypage/main.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">마이페이지</div>
+								</a>
+							</li>
+							<li class="nav_home">
+								<a href="../../mw/index.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">홈</div>
+								</a>
+							</li>
+							<li class="nav_favorite">
+								<a href="../../mw/mypage/wish.html">
+									<div class="nav_img"></div>
+									<div class="nav_tit">관심상품</div>
+								</a>
+							</li>
+							<li class="nav_cart">
+								<a href="../../mw/order/cart.html">
+									<div class="nav_img">
+										<div class="nav_cart_cnt">3</div>
+									</div>
+									<div class="nav_tit">장바구니</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+                    <div class="layer_content">
+                        <section class="main_index">
+                            <div class="goods_tit">카테고리</div>
+                            
+                            <dl class="toggle_category_list toggle_list">
+                                <!-- on : 내용이 보일 경우 -->
+                                <dt>
+                                    <img src="../img/goods_category2x_01.png" alt="goods_category_01">
+                                    <p class="tit">채소/과일</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">채소/과일1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">채소/과일2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">채소/과일3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">채소/과일4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_02.png" alt="goods_category_02">
+                                    <p class="tit">쌀/잡곡/견과</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">쌀/잡곡/견과1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">쌀/잡곡/견과2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">쌀/잡곡/견과3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">쌀/잡곡/견과4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_03.png" alt="goods_category_03">
+                                    <p class="tit">축산/난류</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">축산/난류1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">축산/난류2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">축산/난류3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">축산/난류4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_04.png" alt="goods_category_04">
+                                    <p class="tit">수산/건어</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">수산/건어1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">수산/건어2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">수산/건어3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">수산/건어4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_05.png" alt="goods_category_05">
+                                    <p class="tit">가공식품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">가공식품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">가공식품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">가공식품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">가공식품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_06.png" alt="goods_category_06">
+                                    <p class="tit">냉동식품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">냉동식품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉동식품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉동식품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉동식품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_07.png" alt="goods_category_07">
+                                    <p class="tit">냉장식품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">냉장식품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉장식품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉장식품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">냉장식품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_08.png" alt="goods_category_08">
+                                    <p class="tit">반찬/젓갈</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">반찬/젓갈1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">반찬/젓갈2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">반찬/젓갈3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">반찬/젓갈4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_09.png" alt="goods_category_09">
+                                    <p class="tit">소스/양념/드레싱</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">간장/고추장/장류</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">소스/드레싱</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">육수/농축액</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">케찹/마요네즈</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_10.png" alt="goods_category_10">
+                                    <p class="tit">조미료/유지류</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">조미료/유지류1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">조미료/유지류2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">조미료/유지류3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">조미료/유지류4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_11.png" alt="goods_category_11">
+                                    <p class="tit">생수/음료/커피/차</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">생수/음료/커피/차1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생수/음료/커피/차2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생수/음료/커피/차3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생수/음료/커피/차4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_12.png" alt="goods_category_12">
+                                    <p class="tit">유제품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">유제품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">유제품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">유제품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">유제품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_13.png" alt="goods_category_13">
+                                    <p class="tit">과자/스낵/안주</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">과자/스낵/안주1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">과자/스낵/안주2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">과자/스낵/안주3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">과자/스낵/안주4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_14.png" alt="goods_category_14">
+                                    <p class="tit">주방/일회용품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">주방/일회용품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">주방/일회용품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">주방/일회용품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">주방/일회용품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>
+                                    <img src="../img/goods_category2x_15.png" alt="goods_category_15">
+                                    <p class="tit">생활/위생용품</p>
+                                </dt>
+                                <dd>
+                                    <ul class="sub_category_list cf">
+                                        <li>
+                                            <a href="../goods/list.html">생활/위생용품1</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생활/위생용품2</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생활/위생용품3</a>
+                                        </li>
+                                        <li>
+                                            <a href="../goods/list.html">생활/위생용품4</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_area layer_content_area" id="alert_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_fix_btn">
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="closeLayer('alert_layer');"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <div class="layer_content_txt"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

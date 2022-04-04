@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="식자재왕 상품 상세">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../../mw/img/logo_favicon.ico">
+        <meta property="og:description" content="식자재왕 상품 상세">
+		<title>식자재왕 상품 상세</title>
+		<meta name="description" content="식자재왕 상품 상세">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<link rel="shortcut icon" href="../../mw/img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="../../mw/img/logo_favicon.ico">
+		
+		<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/common.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/goods.css" type="text/css" rel="stylesheet">
+		<link href="../../css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../mw/js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <header class="header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_left">
+                    <div class="header_back">
+                        <a href="javascript:history.back();"></a>
+                    </div>
+                </div>
+                
+                <div class="header_center">
+                    <div class="header_logo">
+                        <a href="../../mw/index.html">
+                            <img src="../img/logo2x.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header_right">
+                    <div class="header_select">
+                        <div class="content_select_area2">
+                            <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                            <div class="select_tit"></div>
+                            <ul class="select_list cf">
+                                <li>
+                                    <input type="radio" id="branch_1" name="branch" value="1">
+                                    <label for="branch_1">우리들분식(포천)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_2" name="branch" value="2">
+                                    <label for="branch_2">너네들분식(신월)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_3" name="branch" value="3">
+                                    <label for="branch_3">모두의분식(강남)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="branch_4" name="branch" value="4">
+                                    <label for="branch_4">우리분식(상암)</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+			
+			<!-- content -->
+            <div class="content_area">
+                <section class="goods_detail">
+                    <form id="goodsForm" name="goodsForm" method="post" action="" onsubmit="return goodsSubmit(this);">
+                        <article class="go_de_slide_area">
+                            <div class="swiper-container goods_slide">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="../img/goods_slide2x_img.png" alt="goods_slide_img">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../img/goods_slide2x_img.png" alt="goods_slide_img">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../img/goods_slide2x_img.png" alt="goods_slide_img">
+                                    </li>
+                                </ul>
+                                <div class="goods_slide_pagination"></div>
+                                <div class="goods_slide_btn_area">
+                                    <div class="goods_slide_btn goods_slide_prev_btn"><img src="../img/arrow2x_left.png" alt="arrow_left"></div>
+                                    <div class="goods_slide_btn goods_slide_next_btn"><img src="../img/arrow2x_right.png" alt="arrow_right"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- disable : 판매중단일 경우 -->
+                        <article class="go_de_info_area">
+                            <div class="go_de_info_name">[식자재왕] 냉장 모짜렐라치즈 100% 2kg 상품명이 길어지는 경우 텍스트 자름 없이 전체를 모두 표시 합니다.</div>
+
+                            <div class="go_de_info_price">
+                                <span class="goods_sprice"><span class="num">26,900</span>원</span>
+                            </div>
+                        </article>
+
+                        <article class="go_de_explain_area">
+                            <div class="go_de_explain_item" id="explain_goods">
+                                <ul class="content_tab_list cf">
+                                    <!-- on : 해당 메뉴일 경우 -->
+                                    <li class="on">
+                                        <a href="#explain_goods">상품정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="#explain_delivery">배송안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#explain_exchange">교환/반품안내</a>
+                                    </li>
+                                </ul>
+
+                                <div class="explain_goods_con">
+                                    <div class="explain_goods_tit">
+                                        [식자재왕] 냉장 모짜렐라치즈<br>100% 2.5kg
+                                    </div>
+                                    <div class="explain_goods_img">
+                                        <img src="../img/goods_detail_img.png" alt="goods_detail_img">
+                                    </div>
+                                    <table class="goods_explain_table">
+                                        <colgroup>
+                                            <col width="104" class="th00">
+                                            <col width="*" class="th01">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="th00">식품의 유형</th>
+                                                <td class="th01">빵류/가열하여 섭취하는 냉동식품</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">제조연월일, 유통기한 또는 품질유지기한</th>
+                                                <td class="th01">별도 표기일까지</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">원재료명 및 함량</th>
+                                                <td class="th01">자연치즈30.76%{자연치즈99%(모짜렐라치즈[외국산/<span>독일산</span>],우유,식염,유산균배양액,우유응고효소),분말셀롤로오스}강력밀가루21.02%(밀/<span>미국,캐나다산</span>),피자소스17.46%[토마토페이스트(토마토100%<span>중국산</span>),액상과당,양파(<span>국산</span>),백설탕,변성전분],발효소시지6.41%[돼지고기(<span>국내산</span>51.2%,외국산:(<span>미국,아일랜드,스페인</span>등)48.8%)77.22%,돈지방,쇠고기(<span>호주산</span>)18.84%,정제소금(<span>국산</span>),겨자분말,포도당]양파6.5%,피망(<span>중국산</span>),라이스페이퍼(<span>베트남산</span>)</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">유전자변형식품에 해당하는 경우의 표시</th>
+                                                <td class="th01">밀, 우유, 대두, 토마토, 소고기, 돼지고기</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">수입식품 문구</th>
+                                                <td class="th01">상세설명 및 이미지 참조</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">생산자 및 소재지</th>
+                                                <td class="th01">상세설명 및 이미지 참조</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">포장단위별 용량(중량), 수량</th>
+                                                <td class="th01">상세설명 및 이미지 참조</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="go_de_explain_item" id="explain_delivery">
+                                <ul class="content_tab_list cf">
+                                    <!-- on : 해당 메뉴일 경우 -->
+                                    <li>
+                                        <a href="#explain_goods">상품정보</a>
+                                    </li>
+                                    <li class="on">
+                                        <a href="#explain_delivery">배송안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#explain_exchange">교환/반품안내</a>
+                                    </li>
+                                </ul>
+
+                                <div class="explain_delivery_con">
+                                    <table class="goods_explain_table">
+                                        <colgroup>
+                                            <col width="104" class="th00">
+                                            <col width="*" class="th01">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="th00">배송지점</th>
+                                                <td class="th01">포천점</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">배송횟수 및 지역</th>
+                                                <td class="th01">일 00회 (경기 남부지역 및 강원 일부 지역)</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th00">배송비</th>
+                                                <td class="th01">00만원 이상 구매 시 무료배송</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="go_de_explain_item" id="explain_exchange">
+                                <ul class="content_tab_list cf">
+                                    <!-- on : 해당 메뉴일 경우 -->
+                                    <li>
+                                        <a href="#explain_goods">상품정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="#explain_delivery">배송안내</a>
+                                    </li>
+                                    <li class="on">
+                                        <a href="#explain_exchange">교환/반품안내</a>
+                                    </li>
+                                </ul>
+
+                                <div class="explain_exchange_con">
+                                    <ul class="goods_explain_list cf">
+                                        <li>교환 및 반품은 배송완료 후 00일 이내 신청 가능합니다.</li>
+                                        <li>신선식품의 교환 및 반품은 반드시 배송완료 후 1~2일 이내 연락을 부탁드립니다.</li>
+                                        <li>단순 변심에 의한 반품의 경우 왕복 배송비 (00원)를 결제 후 환불됩니다.</li>
+                                        <li>상품을 임의로 훼손, 가공, 조리, 폐기하신 경우 교환 및 반품이 불가합니다.</li>
+                                        <li>배송 및 판매자 과실로 인한 배송 실수, 상품누락, 파손 등의 경우 배송비를 포함하여 피해 발생 상당금액을 환불합니다.</li>
+                                        <li>상품에 문제가 있는 경우 [고객센터&gt;1:1문의]를 통해 사진을 남겨 주시면 빠른 처리를 도와드립니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="go_de_cart_area">
+                            <div class="go_de_cart_btn on"></div>
+                            <div class="go_de_cart_con cf">
+                                <div class="cart_goods_price">
+                                    <span id="goods_price" class="num">3,123,112,345</span>원
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="go_de_btn_area">
+                            <div class="content_fix_btn_area">
+                                <div class="content_btn3_area cf">
+                                    <!-- on : 관심상품에 추가했을 경우 -->
+                                    <button type="button" class="content_favorite_btn on"></button>
+                                    <button type="button" class="content_btn2" disabled><span>품절</span></button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- footer -->
+                        <footer class="footer">
+                            <h1 class="not_view">footer</h1>
+
+                            <div class="footer_box">
+                                <div class="footer_info">
+                                    <p class="tit">푸디스트</p>
+                                    <p class="con">대표이사 : 홍길동</p>
+                                    <p class="con">경기도 포천시 소흘읍 부흥로 280-2</p><br>
+                                    <p class="con">사업자등록번호 : 123-12-12345</p>
+                                    <p class="con">통신판매업신고번호 : 1234-지역구분-1234</p><br>
+                                    <p class="con">개인정보보호책임자 : 홍길동(email@gmail.com)</p><br>
+                                    <p class="con">고객센터 : 1811-9696 | FAX 02-6919-2512</p>
+                                </div>
+
+                                <ul class="foonter_link cf">
+                                    <li>
+                                        <a href="#">회사소개</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../mw/etc/licensing.html">이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../mw/etc/privacy.html">개인정보처리취급방침</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">매장안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </form>
+                </section>
+            </div>            
+            
+            <!-- layer -->
+            <div class="content_area layer_content_area" id="alert_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_fix_btn">
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="closeLayer('alert_layer');"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <div class="layer_content_txt"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

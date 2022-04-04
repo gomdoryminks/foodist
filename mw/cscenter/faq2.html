@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta property="og:url" content="">
-        <meta property="og:title" content="식자재왕 고객센터">
+        <meta property="og:title" content="식자재왕 FAQ">
         <meta property="og:type" content="website">
         <meta property="og:image" content="../../mw/img/logo_favicon.ico">
-        <meta property="og:description" content="식자재왕 고객센터">
-		<title>식자재왕 고객센터</title>
-		<meta name="description" content="식자재왕 고객센터">
+        <meta property="og:description" content="식자재왕 FAQ">
+		<title>식자재왕 FAQ</title>
+		<meta name="description" content="식자재왕 FAQ">
 		<meta name="author" content="minks">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no, address=no, email=no">
@@ -44,7 +44,7 @@
 	<body>
 		<div id="wrap">
             <!-- header -->
-			<!-- sub_header : 메인, 상품관련 페이지가 아닌 페이지 -->
+		    <!-- sub_header : 메인, 상품관련 페이지가 아닌 페이지 -->
 		    <header class="header sub_header">
                 <h1 class="not_view">header</h1>
                 
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="header_center">
-                    <div class="header_tit">고객센터</div>
+                    <div class="header_tit">FAQ</div>
                 </div>
             </header>
             
@@ -102,154 +102,42 @@
 			
 			<!-- content -->
             <div class="content_area">
-                <section class="cscenter_main">
-                    <article class="cs_ma_menu_area">
-                        <ul class="cs_ma_menu cf">
-                            <li>
-                                <a href="../../mw/cscenter/notice.html">
-                                    <img src="../img/notice2x.png" alt="notice">
-                                    <p class="tit">공지사항</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../../mw/cscenter/faq.html">
-                                    <img src="../img/faq2x.png" alt="faq">
-                                    <p class="tit">FAQ</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../../mw/mypage/inquiry_write.html">
-                                    <img src="../img/inquiry2x.png" alt="inquiry">
-                                    <p class="tit">1:1문의</p>
-                                </a>
-                            </li>
-                        </ul>
+                <section class="faq_list">
+                    <article class="fa_li_search_area">
+                        <div class="content_search_area">
+                            <form id="searchForm" name="searchForm" method="get" action="../../mw/cscenter/faq3.html" class="cf" onsubmit="return searchSubmit(this);">
+                                <div class="content_text_area search_text_area">
+                                    <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우 -->
+                                    <input type="text" id="sword" name="sword" class="content_text search_text" placeholder="궁금한 사항을 검색하세요." value="회원">
+                                    <span class="content_text_btn"></span>
+                                </div>
+                                <input type="submit" value="" class="search_btn">
+                            </form>
+                        </div>
                     </article>
                     
-                    <article class="cs_ma_list_area">
-                        <div class="cs_ma_list_tit">점포 고객센터</div>
-                        <ul class="cs_ma_list cf">
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cs_ma_list_img" style="background-image: url('../img/cscenter_main2x_img.png');"></div>
-                                <div class="cs_ma_list_txt">
-                                    <div class="tit">
-                                        <span class="tit_branch">[포천점]</span>
-                                        <a href="tel:000-0000-0000">
-                                            <span class="tit_tel">000-0000-0000</span>
-                                        </a>
-                                    </div>
-                                    <div class="time">
-                                        <span class="time_tit">영업시간</span>
-                                        <span class="time_con">00:00 ~ 00:00</span>
-                                    </div>
-                                </div>
-                                <div class="cs_ma_list_link">
-                                    <a href="#">
-                                        <img src="../img/arrow2x_right.png" alt="arrow_right">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <article class="fa_li_search_result_area">
+						<div class="content_search_top_box">
+							<div class="content_top_box_txt">
+								<span class="category">회원</span>에 대한 검색결과<br>총 <span class="num">12</span>건
+							</div>
+						</div>
+                    </article>
+
+                    <article class="fa_li_list_area">                        
+                        <dl class="fa_li_list toggle_list">
+                            <!-- on : 내용이 보일 경우 -->
+                            <dt>기본 배송지는 어떻게 바꾸나요?</dt>
+                            <dd>기본 배송지는 어떻게 바꾸나요?</dd>
+                            <dt>배송 추적을 할 수 있나요?</dt>
+                            <dd>배송 추적을 할 수 있나요?</dd>
+                            <dt>배송 예정 시간에 배송지에 없는 경우 어떻게 되나요?</dt>
+                            <dd>배송 예정 시간에 배송지에 없는 경우 어떻게 되나요?</dd>
+                            <dt><span class="keyword">회원</span>가입은 어떻게 하나요?</dt>
+                            <dd><span class="keyword">회원</span>가입 직후 사업자등록번호와 사업자등록증을첨부하여 신청해주시거나, 로그인후 마이페이지&gt;<span class="keyword">회원</span>정보수정에서 사업자등록번호와사업자등록증을 첨부하여 신청하실 수 있습니다.</dd>
+                            <dt><span class="keyword">회원</span>가입 시 혜택이 있나요?</dt>
+                            <dd><span class="keyword">회원</span>가입 시 혜택이 있나요?</dd>
+                        </dl>
                     </article>
                 </section>
             </div>

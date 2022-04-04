@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="식자재왕 주문/결제">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../../mw/img/logo_favicon.ico">
+        <meta property="og:description" content="식자재왕 주문/결제">
+		<title>식자재왕 주문/결제</title>
+		<meta name="description" content="식자재왕 주문/결제">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<link rel="shortcut icon" href="../../mw/img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="../../mw/img/logo_favicon.ico">
+		
+		<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/common.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/order.css" type="text/css" rel="stylesheet">
+		<link href="../../css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../mw/js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <!-- sub_header : 메인, 상품관련 페이지가 아닌 페이지 -->
+		    <header class="header sub_header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_left">
+                    <div class="header_back">
+                        <a href="javascript:history.back();"></a>
+                    </div>
+                </div>
+                
+                <div class="header_center">
+                    <div class="header_tit">주문/결제</div>
+                </div>
+            </header>
+			
+			<!-- content -->
+            <!-- content_order_area : 주문관련 페이지일 경우 -->
+            <div class="content_area content_order_area">
+                <section class="order_order">                    
+                    <!-- validForm : 유효성 체크할 경우 -->
+                    <form id="orderForm" name="orderForm" class="validForm" method="post" action="../../mw/order/order_finish.html" onsubmit="return orderSubmit(this);">
+                        <article class="or_or_goods_area">
+                            <dl class="toggle_order_list">
+                                <dt class="on">주문상품</dt>
+                                <dd>
+                                    <ul class="order_goods_list cf">
+                                        <li>
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_list_img.png" alt="order_list_img">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <div class="order_goods_name">
+                                                    <a href="../../mw/goods/detail.html">[식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg</a>
+                                                </div>
+                                                <div class="order_goods_num cf">
+                                                    <div class="order_goods_ea"><span class="tit">수량</span><span class="num">100</span></div>
+                                                    <div class="order_goods_price"><span class="tit">상품금액</span><span class="num">23,123,123</span>원</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="order_goods_img">
+                                                <a href="../../mw/goods/detail.html">
+                                                    <img src="../img/order_list_img2.png" alt="order_list_img2">
+                                                </a>
+                                            </div>
+                                            <div class="order_goods_txt">
+                                                <div class="order_goods_name">
+                                                    <a href="../../mw/goods/detail.html">[식자재왕] 윈윈자숙바지락 치킨치즈 등심돈까스 윈윈자숙바지락살 치즈 등심돈까스1.8kg</a>
+                                                </div>
+                                                <div class="order_goods_num cf">
+                                                    <div class="order_goods_ea"><span class="tit">수량</span><span class="num">100</span></div>
+                                                    <div class="order_goods_price"><span class="tit">상품금액</span><span class="num">23,123,123</span>원</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </article>
+                        
+                        <article class="or_or_order_area">
+                            <dl class="toggle_order_list">
+                                <dt class="on">주문자</dt>
+                                <dd>
+                                    <div class="content_label_area">
+                                        <div class="tit">이름</div>
+                                        <div class="con">홍길동</div>
+                                    </div>
+                                    
+                                    <div class="content_label_area">
+                                        <div class="tit">이메일주소</div>
+                                        <div class="con">abcd1234@gmail.com</div>
+                                    </div>
+                                    
+                                    <div class="content_label_area">
+                                        <div class="tit">휴대폰번호</div>
+                                        <div class="con">01012345678</div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </article>
+                        
+                        <article class="or_or_receiver_area">
+                            <dl class="toggle_order_list">
+                                <dt class="on">
+                                    <p class="tit">배송지</p>
+                                    <p class="category">우리들분식</p>
+                                </dt>
+                                <dd>
+                                    <div class="order_receiver_txt">(12345) 서울특별시 성동구 성수동 성수1가 성수12길12 영창 디지털타워14층 윈플러스</div>
+                                    
+                                    <div class="content_text_tit">
+                                        <label>배송시간 선택</label>
+                                    </div>
+                                    <div class="order_receiver_table">
+                                        <div class="order_receiver_tr">
+                                            <div class="order_receiver_th th00">구분</div>
+                                            <div class="order_receiver_th th01"><span class="tit">오늘</span><br>11/10<span class="day">(화)</span></div>
+                                            <div class="order_receiver_th th02"><span class="tit">내일</span><br>11/11<span class="day">(수)</span></div>
+                                        </div>
+                                        <div class="order_receiver_tr">
+                                            <div class="order_receiver_td th00">1<span class="turn">회차</span> (10:00 ~ 13:00)</div>
+                                            <div class="order_receiver_td th01"><span class="finish">마감</span></div>
+                                            <div class="order_receiver_td th02"><span class="finish">마감</span></div>
+                                        </div>
+                                        <div class="order_receiver_tr">
+                                            <div class="order_receiver_td th00">2<span class="turn">회차</span> (11:00 ~ 14:00)</div>
+                                            <div class="order_receiver_td th01">
+                                                <div class="content_radio_area">
+                                                    <input type="radio" id="request_time_1" name="request_time" value="1" checked required>
+                                                    <label for="request_time_1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="order_receiver_td th02"><span class="finish">마감</span></div>
+                                        </div>
+                                        <div class="order_receiver_tr">
+                                            <div class="order_receiver_td th00">3<span class="turn">회차</span> (14:00 ~ 17:00)</div>
+                                            <div class="order_receiver_td th01">
+                                                <div class="content_radio_area">
+                                                    <input type="radio" id="request_time_2" name="request_time" value="2">
+                                                    <label for="request_time_2"></label>
+                                                </div>
+                                            </div>
+                                            <div class="order_receiver_td th02">
+                                                <div class="content_radio_area">
+                                                    <input type="radio" id="request_time_3" name="request_time" value="3">
+                                                    <label for="request_time_3"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order_receiver_tr">
+                                            <div class="order_receiver_td th00">4<span class="turn">회차</span> (17:00 ~ 20:00)</div>
+                                            <div class="order_receiver_td th01">
+                                                <div class="content_radio_area">
+                                                    <input type="radio" id="request_time_4" name="request_time" value="4">
+                                                    <label for="request_time_4"></label>
+                                                </div>
+                                            </div>
+                                            <div class="order_receiver_td th02">
+                                                <div class="content_radio_area">
+                                                    <input type="radio" id="request_time_5" name="request_time" value="5">
+                                                    <label for="request_time_5"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="content_text_tit">
+                                        <label>배송요청사항</label>
+                                    </div>
+                                    <div class="content_select_area">
+                                        <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                        <div class="select_tit"></div>
+                                        <ul class="select_list cf">
+                                            <li>
+                                                <input type="radio" id="request_memo" name="request_memo" value="" onclick="checkDemand();">
+                                                <label for="request_memo">직접입력</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="request_memo_1" name="request_memo" value="1" onclick="checkDemand();">
+                                                <label for="request_memo_1">배송요청사항1</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="request_memo_2" name="request_memo" value="2" onclick="checkDemand();">
+                                                <label for="request_memo_2">배송요청사항2</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="request_memo_3" name="request_memo" value="3" onclick="checkDemand();">
+                                                <label for="request_memo_3">배송요청사항3</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="request_memo_4" name="request_memo" value="4" onclick="checkDemand();">
+                                                <label for="request_memo_4">배송요청사항4</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="content_text_area" id="demandInputArea">
+                                        <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우 -->
+                                        <input type="text" id="request_txt" name="request_txt" class="content_text" placeholder="배송요청사항을 입력해 주세요.">
+                                        <span class="content_text_btn"></span>
+                                        <span class="content_text_error"></span>
+                                    </div>
+                                    
+                                    <div class="content_text_tit">
+                                        <label for="receiver_mobile">수령인 연락처</label>
+                                    </div>
+                                    <div class="content_text_area">
+                                        <!-- on : 텍스트 작성할 경우, success : 유효성 검사 성공할 경우, error : 유효성 검사 실패할 경우, data-type : 텍스트 타입 -->
+                                        <input type="tel" id="receiver_mobile" name="receiver_mobile" class="content_text tel_text" placeholder="수령인 연락처" data-type="tel" value="010-1234-5678" required numberonly>
+                                        <span class="content_text_btn"></span>
+                                        <span class="content_text_error"></span>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </article>
+                        
+                        <article class="or_or_coupon_area">
+                            <dl class="toggle_order_list">
+                                <dt class="on">
+                                    <p class="tit">할인쿠폰</p>
+                                </dt>
+                                <dd>
+                                    <div class="order_coupon_area cf">
+                                        <div class="content_btn1_area">
+                                            <button type="button" class="content_btn1" onclick="openLayer('order_coupon_layer');"><span>쿠폰선택</span></button>
+                                        </div>
+                                        <div class="order_coupon_txt">
+                                            <span id="order_coupon_name" class="name">회원가입축하</span>
+                                            <span class="price"><span id="order_coupon_price" class="num">-1,000</span>원</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </article>
+                        
+                        <article class="or_or_payment_area">
+                            <dl class="toggle_order_list">
+                                <dt class="on">
+                                    <p class="tit">결제수단</p>
+                                </dt>
+                                <dd>
+                                    <ul class="order_payment_area cf">
+                                        <li class="credit_card_payment">
+                                            <input type="radio" id="payment_1" name="payment" value="1" checked required onclick="checkPayment();">
+                                            <label for="payment_1">
+                                                <span class="order_payment_txt">신용카드</span>
+                                            </label>
+                                        </li>
+                                        <li class="cash_payment">
+                                            <input type="radio" id="payment_2" name="payment" value="2" onclick="checkPayment();">
+                                            <label for="payment_2">
+                                                <span class="order_payment_txt">실시간 계좌이체</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div id="dealproof_container">				
+                                        <div class="order_paymethod_tit">현금영수증 발급신청</div>
+
+                                        <div class="content_label_area">
+                                            <div class="con block_con">
+                                                <div class="content_radio_area green_radio">
+                                                    <input type="radio" id="dealproof_cash_per" name="dpIssueInput" value="per" checked onclick="checkDealproof();">
+                                                    <label for="dealproof_cash_per">개인소득공제</label>
+                                                </div>
+                                                <div class="content_radio_area green_radio">
+                                                    <input type="radio" id="dealproof_cash_biz" name="dpIssueInput" value="biz" onclick="checkDealproof();">
+                                                    <label for="dealproof_cash_biz">사업자지출증빙</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 개인소득공제 -->
+                                        <div id="dealproof_cash_num_per">
+                                            <div class="content_select_area">
+                                                <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                                <div class="select_tit"></div>
+                                                <ul class="select_list cf">
+                                                    <li>
+                                                        <input type="radio" id="dpCashTypeMobile" name="dpCashType" value="휴대전화번호" checked onclick="checkDealptype('mobile');">
+                                                        <label for="dpCashTypeMobile">휴대전화번호</label>
+                                                    </li>			
+                                                    <li>
+                                                        <input type="radio" id="dpCashTypeCredit" name="dpCashType" value="신용카드번호" onclick="checkDealptype('credit');">
+                                                        <label for="dpCashTypeCredit">신용카드번호</label>
+                                                    </li>			
+                                                    <li>
+                                                        <input type="radio" id="dpCashTypeReceipt" name="dpCashType" value="모바일 현금영수증카드" onclick="checkDealptype('receipt');">
+                                                        <label for="dpCashTypeReceipt">모바일 현금영수증카드</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- 휴대전화번호 -->
+                                            <div id="dealptype_cash_num_mobile">
+                                                <div class="content_tel_area">
+                                                    <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                                    <div class="content_text_area2">
+                                                        <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                                        <div class="content_text">
+                                                            <input type="tel" id="dpCashMobile1" name="dpCashMobile1" value="" maxlength="3" size="3" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashMobile2" name="dpCashMobile2" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashMobile3" name="dpCashMobile3" value="" maxlength="4" size="4" numberonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 신용카드번호 -->
+                                            <div id="dealptype_cash_num_credit">
+                                                <div class="content_tel_area">
+                                                    <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                                    <div class="content_text_area2">
+                                                        <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                                        <div class="content_text">
+                                                            <input type="tel" id="dpCashCredit1" name="dpCashCredit1" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashCredit2" name="dpCashCredit2" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashCredit3" name="dpCashCredit3" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashCredit4" name="dpCashCredit4" value="" maxlength="4" size="4" numberonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 모바일 현금영수증카드 -->
+                                            <div id="dealptype_cash_num_receipt">
+                                                <div class="content_tel_area">
+                                                    <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                                    <div class="content_text_area2">
+                                                        <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                                        <div class="content_text">
+                                                            <input type="tel" id="dpCashReceipt1" name="dpCashReceipt1" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashReceipt2" name="dpCashReceipt2" value="" maxlength="4" size="4" numberonly>
+                                                            <span>-</span>
+                                                            <input type="tel" id="dpCashReceipt3" name="dpCashReceipt3" value="" maxlength="4" size="4" numberonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 사업자지출증빙 -->
+                                        <div id="dealproof_cash_num_biz">
+                                            <div class="content_tel_area">
+                                                <!-- content_text_area2 : 텍스트가 여러개일 경우 -->
+                                                <div class="content_text_area2">
+                                                    <!-- disable : 텍스트 비활성화 할 경우, error : 유효성 검사 실패할 경우 -->
+                                                    <div class="content_text">
+                                                        <input type="tel" id="dpCashBizNo1" name="dpCashBizNo1" value="" maxlength="3" size="3" numberonly>
+                                                        <span>-</span>
+                                                        <input type="tel" id="dpCashBizNo2" name="dpCashBizNo2" value="" maxlength="2" size="2" numberonly>
+                                                        <span>-</span>
+                                                        <input type="tel" id="dpCashBizNo3" name="dpCashBizNo3" value="" maxlength="5" size="5" numberonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </article>
+                        
+                        <article class="or_or_result_area">
+                            <div class="order_result_price">
+                                <div class="order_result_gprice cf">
+                                    <p class="or_de_item_tit">주문금액</p>
+                                    <p class="or_de_item_con"><span>23,123,123</span>원</p>
+                                </div>
+                                <div class="order_result_cprice cf">
+                                    <p class="or_de_item_tit">쿠폰할인</p>
+                                    <p class="or_de_item_con"><span id="order_result_cprice">-33,000</span>원</p>
+                                </div>
+                                <div class="order_result_dprice cf">
+                                    <p class="or_de_item_tit">배송비</p>
+                                    <p class="or_de_item_con"><span class="free">무료배송</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="order_result_payprice cf">
+                                <p class="or_de_item_tit">총 결제예정금액</p>
+                                <p class="or_de_item_con"><span id="order_result_payprice">22,865,433</span>원</p>
+                            </div>
+                            
+                            <div class="order_result_agreement">위 주문 내용을 확인하였으며, 결제에 동의합니다.</div>
+                        </article>
+                        
+                        <article class="or_or_btn_area">
+                            <div class="content_fix_btn_area">
+                                <div class="content_btn3_area cf">
+                                    <div class="content_sum_price cf">
+                                        <p class="tit">합계</p>
+                                        <p class="con"><span id="order_price" class="num">22,865,433</span>원</p>
+                                    </div>
+                                    <button type="submit" class="content_btn2 half_btn"><span>결제하기</span></button>
+                                </div>
+                            </div>
+                        </article>
+                    </form>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="content_area layer_content_area" id="order_coupon_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_header cf">
+                        <div class="header_tit">쿠폰조회 및 적용</div>
+
+                        <div class="header_close">
+                            <img src="../img/close2x.png" alt="close" class="layer_close_btn">
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <section class="order_order">
+                            <form id="orderCouponForm" name="orderCouponForm" method="post" action="" onsubmit="return orderCouponSubmit(this);">
+                                <div class="content_select_area">
+                                    <!-- on : 셀렉트박스의 옵션이 보일 경우, disable : 셀렉트박스 비활성화 할 경우 -->
+                                    <div class="select_tit"></div>
+                                    <ul class="select_list cf">
+                                        <li>
+                                            <input type="radio" id="coupon" name="coupon" value="">
+                                            <label for="coupon">쿠폰 선택해 주세요</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="coupon_1" name="coupon" value="1">
+                                            <label for="coupon_1">쿠폰1</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="coupon_2" name="coupon" value="2">
+                                            <label for="coupon_2">쿠폰2</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="coupon_3" name="coupon" value="3">
+                                            <label for="coupon_3">쿠폰3</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="coupon_4" name="coupon" value="4">
+                                            <label for="coupon_4">쿠폰4</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="order_result_price">
+                                    <div class="order_result_cprice cf">
+                                        <p class="or_de_item_tit">총 할인 금액</p>
+                                        <p class="or_de_item_con"><span id="coupon_price">-33,000</span>원</p>
+                                    </div>
+                                    <div class="order_result_gprice cf">
+                                        <p class="or_de_item_tit">총 쿠폰 적용 금액</p>
+                                        <p class="or_de_item_con"><span id="discount_price">23,123,123</span>원</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="content_btn2_area cf">
+                                    <button type="button" class="content_btn1 half_btn" onclick="closeLayer('order_coupon_layer');"><span>취소</span></button>
+                                    <button type="submit" class="content_btn2 half_btn"><span>쿠폰적용</span></button>
+                                </div>
+                            </form>
+                            
+                            <div class="or_or_coupon_explain">
+                                <div class="explain_tit">쿠폰내역</div>
+                                
+                                <ul class="my_coupon_list cf">
+                                    <li>
+                                        <div class="my_coupon_txt cf">
+                                            <div class="tit">쿠폰명</div>
+                                            <div class="con">회원가입축하쿠폰</div>
+                                        </div>
+                                        <div class="my_coupon_txt cf">
+                                            <div class="tit">할인</div>
+                                            <div class="con"><span>1,000</span>원</div>
+                                        </div>
+                                        <div class="my_coupon_txt cf">
+                                            <div class="tit">기간</div>
+                                            <div class="con"><span>2020-12-01 ~ 2020-12-11</span></div>
+                                        </div>
+                                        <div class="my_coupon_txt cf">
+                                            <div class="tit">제한사항</div>
+                                            <div class="con">제한없음</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="explain_con">
+                                    <li>고객님이 보유하신 쿠폰을 선택하시면 <span>할인금액</span>이 계산되어 나타납니다.</li>
+                                    <li><span>[쿠폰적용]</span> 버튼을 클릭하시면, 쿠폰결제 적용이 완료됩니다.</li>
+                                    <li>중복된 쿠폰은 사용할 수 없습니다.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="or_or_coupon_explain">
+                                <div class="explain_tit">쿠폰사용 시 유의사항</div>
+                                
+                                <ul class="explain_con">
+                                    <li>각 쿠폰은 사용 제한 금액 및 사용 기간이 있으니 사용전 확인해 주세요.</li>
+                                    <li>쿠폰은 쿠폰당 한 상품에 한해서만 사용하실 수 있습니다.</li>
+                                    <li>쿠폰 금액이 판매가를 초과할 경우,쿠폰이 적용되지 않습니다.</li>
+                                    <li>쿠폰의 사용기간내에 꼭 사용해주시기 바랍니다.</li>
+                                    <li>주문이 완료된 이후에는 쿠폰을 사용할 수 없습니다.</li>
+                                    <li>일부 품목 및 카테고리에서는 사용하실 수 없습니다.</li>
+                                    <li>쿠폰 사용시, 적립금은 주문금액이 아닌 최종 결제 금액을 기준으로 적립해 드립니다.</li>
+                                    <li>주문 후 취소, 반품, 환불의 경우 한번 사용하신 쿠폰은 다시 사용하실 수 없습니다.</li>
+                                    <li>쿠폰리스트에는 다운 받은 쿠폰만 나타납니다.</li>
+                                    <li>(회원가입, 신규구입쿠폰, 특정회원에게 직접 서비스하는 쿠폰 제외)</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content_area layer_content_area" id="alert_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_fix_btn">
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="closeLayer('alert_layer');">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <div class="layer_content_txt"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

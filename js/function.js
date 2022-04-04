@@ -1,0 +1,8 @@
+/**
+ * @author minks
+ */
+
+$(function() {
+	
+});
+

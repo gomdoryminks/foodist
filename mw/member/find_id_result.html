@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="식자재왕 아이디찾기">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../../mw/img/logo_favicon.ico">
+        <meta property="og:description" content="식자재왕 아이디찾기">
+		<title>식자재왕 아이디찾기</title>
+		<meta name="description" content="식자재왕 아이디찾기">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<link rel="shortcut icon" href="../../mw/img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="../../mw/img/logo_favicon.ico">
+		
+		<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/common.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/member.css" type="text/css" rel="stylesheet">
+		<link href="../../css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../mw/js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <!-- sub_header : 메인, 상품관련 페이지가 아닌 페이지 -->
+		    <header class="header sub_header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_left">
+                    <div class="header_back">
+                        <a href="javascript:history.back();"></a>
+                    </div>
+                </div>
+                
+                <div class="header_center">
+                    <div class="header_tit">아이디찾기</div>
+                </div>
+            </header>
+			
+			<!-- content -->
+            <!-- content_member_area : 회원관련 페이지일 경우 -->
+            <div class="content_area content_member_area">
+                <section class="find_id_result">
+                    <article class="fi_id_re_con_area">
+                        <div class="content_member_top_box">
+                            <div class="content_top_box_txt">
+                                입력하신 정보와 일치하는 아이디는<br>아래와 같습니다.
+                            </div>
+                        </div>
+                        
+                        <div class="fi_id_re_con_box">
+                            <div class="content_label_area">
+                                <div class="con block_con">
+                                    <p class="result_id">wang365</p>
+                                    <p class="result_date">(가입일 : <span>2020.11.11</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content_btn2_area cf">
+                            <button type="button" class="content_btn3 all_btn" onclick="location.href='../../mw/member/find_pw.html'"><span>비밀번호찾기</span></button>
+                            <button type="button" class="content_btn3 all_btn" onclick="location.href='../../mw/member/join_agree.html'"><span>회원가입</span></button>
+                        </div>
+
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="location.href='../../mw/member/login.html';"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="content_area layer_content_area" id="alert_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_fix_btn">
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="closeLayer('alert_layer');"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <div class="layer_content_txt"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

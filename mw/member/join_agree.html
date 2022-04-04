@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="식자재왕 회원가입">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../../mw/img/logo_favicon.ico">
+        <meta property="og:description" content="식자재왕 회원가입">
+		<title>식자재왕 회원가입</title>
+		<meta name="description" content="식자재왕 회원가입">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<link rel="shortcut icon" href="../../mw/img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="../../mw/img/logo_favicon.ico">
+		
+		<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../../css/font.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/common.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../../mw/css/member.css" type="text/css" rel="stylesheet">
+		<link href="../../css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="../../js/jquery-1.11.1.min.js"></script>
+		<script src="../../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="../../js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="../../js/swiper.min.js"></script>
+		<script src="../../mw/js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <!-- sub_header : 메인, 상품관련 페이지가 아닌 페이지 -->
+		    <header class="header sub_header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_left">
+                    <div class="header_back">
+                        <a href="javascript:history.back();"></a>
+                    </div>
+                </div>
+                
+                <div class="header_center">
+                    <div class="header_tit">회원가입</div>
+                </div>
+            </header>
+			
+			<!-- content -->
+            <!-- content_member_area : 회원관련 페이지일 경우 -->
+            <div class="content_area content_member_area">
+                <section class="join_agree">
+                    <article class="jo_ag_con_area">
+                        <!-- validForm : 유효성 체크할 경우 -->
+                        <form id="joinAgreeForm" name="joinAgreeForm" class="validForm" method="post" action="../../mw/member/join_certify.html" onsubmit="return joinAgreeSubmit(this);">
+                            <div class="jo_ag_con_item">
+                                <div class="agree_chk">
+                                    <div class="content_chk_area">
+                                        <!-- required : 체크박스 필수일 경우 -->
+                                        <input type="checkbox" id="join_agree_1" name="join_agree_1" class="required">
+                                        <label for="join_agree_1"><span>[필수]</span> 이용약관</label>
+                                    </div>
+                                </div>
+                                <div class="agree_box">
+                                    <div class="agree_box_con">
+                                        이 약관은 주식회사 다담리테일 회사(전자거래 사업자)가 운영하는 다담식자재마트 온라인 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버몰과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="jo_ag_con_item">
+                                <div class="agree_chk">
+                                    <div class="content_chk_area">
+                                        <!-- required : 체크박스 필수일 경우 -->
+                                        <input type="checkbox" id="join_agree_2" name="join_agree_2" class="required">
+                                        <label for="join_agree_2"><span>[필수]</span> 개인정보수집이용동의</label>
+                                    </div>
+                                </div>
+                                <div class="agree_box">
+                                    <div class="agree_box_con">
+                                        이 약관은 주식회사 다담리테일 회사(전자거래 사업자)가 운영하는 다담식자재마트 온라인 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버몰과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="jo_ag_con_item">
+                                <div class="agree_chk">
+                                    <div class="content_chk_area">
+                                        <input type="checkbox" id="join_agree_3" name="join_agree">
+                                        <label for="join_agree_3"> [선택] 마케팅 활용동의</label>
+                                    </div>
+                                </div>
+                                <div class="agree_box">
+                                    <div class="agree_box_con">
+                                        할인쿠폰, 이벤트 소식안내, 행사 참여등을 동의합니다.<br>
+                                        SMS, 이메일<br><br>
+                                        <span class="text_indent">1. 수신동의 해주신 분에 한해 할인쿠폰 및 이벤트 소식이 발송됩니다.</span>
+                                        <span class="text_indent">2. 상품 구매 정보는 수신 동의 여부와 관계없이 발송됩니다.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="jo_ag_con_item">
+                                <div class="agree_chk_box">
+                                    <div class="content_chk_area">
+                                        <!-- data-chkname : 전체선택할 경우 선택할 체크박스 name 값 -->
+                                        <input type="checkbox" id="all_chk" name="all_chk" data-chkname="join_agree">
+                                        <label for="all_chk">전체동의</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_fix_btn_area">
+                                <div class="content_btn3_area cf">
+                                    <button type="button" class="content_btn1" onclick="history.back();"><span>취소</span></button>
+                                    <button type="submit" class="content_btn2"><span>다음</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="content_area layer_content_area" id="alert_layer">
+                <div class="layer_mask"></div>
+                
+                <div class="layer_box">
+                    <div class="layer_fix_btn">
+                        <div class="content_fix_btn_area">
+                            <div class="content_btn3_area cf">
+                                <button type="button" class="content_btn2 all_btn" onclick="closeLayer('alert_layer');"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer_content">
+                        <div class="layer_content_txt"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>
